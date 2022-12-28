@@ -8,6 +8,7 @@ const StyledHeader = styled.header`
 	display: flex;
 	max-width: 1240px;
 	margin: auto;
+	padding: 3%;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
@@ -25,13 +26,12 @@ const StyledLink = styled(Link)`
 	padding-left: 50px;
 	text-decoration: none;
 	color: ${colors.primary};
-	&:hover{
-		cursor: pointer;
-		text-decoration: underline;
-	}
+	text-decoration: underline;
+
 `
 
 export default function Header() {
+
     return (
         <StyledHeader>
             <StyledImg src={image} alt="logo kasa" />

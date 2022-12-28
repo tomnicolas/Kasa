@@ -10,14 +10,13 @@ import Footer from "./components/Footer/footer"
 const GlobalStyle = createGlobalStyle`
 	body {
 		text-align: center;
-		padding: 40px 3% 0 3%;
 		margin: auto;
 	}
 `
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
+    <div>
 		<GlobalStyle/>
 		<Header/>
 		<Routes>
@@ -31,4 +30,4 @@ function App() {
   )
 }
 
-export default App
+
