@@ -1,11 +1,13 @@
 import React from "react"
-import image from "./../../Assets/LOGO.svg"
+import image from "./../Assets/LOGO.svg"
 import styled from 'styled-components'
-import colors from '../../Utils/variables'
+import colors from '../Utils/variables'
 
 const StyledFooter = styled.footer`
+    width: 100%;
     height : 200px;
     margin: auto;
+    margin-top: 50px;
     bottom: 0;
     background-color: ${colors.secondary};
 `

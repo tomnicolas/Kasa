@@ -1,8 +1,8 @@
 import React from "react"
 import styled from 'styled-components'
 import { Link } from "react-router-dom"
-import image from "./../../Assets/LOGO.svg"
-import colors from '../../Utils/variables'
+import image from "./../Assets/LOGO.svg"
+import colors from '../Utils/variables'
 
 const StyledHeader = styled.header`
 	display: flex;
@@ -11,11 +11,8 @@ const StyledHeader = styled.header`
 	padding: 40px 20px 40px 20px;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-between;
-`
-
-const StyledImg = styled.img`
 	height: 68px;
+	justify-content: space-between;
 `
 
 const StyledLink = styled(Link)`
@@ -34,7 +31,7 @@ export default function Header() {
 
     return (
         <StyledHeader>
-            <StyledImg src={image} alt="logo kasa" />
+            <img src={image} alt="logo kasa" />
             <nav className='nav'>
                 <StyledLink to="/">Accueil</StyledLink>
                 <StyledLink to="/about">A Propos</StyledLink>

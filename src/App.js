@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom"
 import { createGlobalStyle } from 'styled-components'
-import Home from "./components/pages/Home/Home"
-import Logement from "./components/pages/Logement/logement"
-import About from "./components/pages/About/about"
-import Error from "./components/pages/404/404"
-import Header from "./components/Header/header"
-import Footer from "./components/Footer/footer"
+import Home from "./components/pages/Home"
+import Logement from "./components/pages/logement"
+import About from "./components/pages/about"
+import Error from "./components/pages/404"
+import Header from "./components/header"
+import Footer from "./components/footer"
 
 const GlobalStyle = createGlobalStyle`
 	body {

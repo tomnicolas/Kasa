@@ -1,5 +1,5 @@
 import React from "react"
-import image from "./../../Assets/IMG.svg"
+import image from "./../Assets/IMG.svg"
 import styled from 'styled-components'
 
 const StyledBanner = styled.div`
@@ -7,7 +7,7 @@ const StyledBanner = styled.div`
     align-items: center;
     height: 223px;
     margin: auto;
-	padding: 40px 20px 40px 20px;
+    margin-top: 10px;
     overflow: hidden;
     max-width: 1240px;
 `
@@ -38,10 +38,8 @@ const StyledTitle = styled.h1`
 export default function Banner() {
     return (
         <StyledBanner>
-            <div>
             <StyledImg src={image} alt="bord de mer"/>
             <StyledTitle>Chez vous, partout et ailleurs</StyledTitle>
-            </div>
         </StyledBanner>
     )
 }
