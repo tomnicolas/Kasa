@@ -6,6 +6,7 @@ import colors from '../../Utils/variables'
 const StyledFooter = styled.footer`
     height : 200px;
     margin: auto;
+    bottom: 0;
     background-color: ${colors.secondary};
 `
 
