@@ -56,6 +56,7 @@ const StyledCover = styled.img`
 const StyledTitre = styled.h3`
     position: absolute;
     z-index: 1;
+    margin-right: 10px;
     color: white;
     text-align : start;
     left: 8%;
@@ -77,7 +78,7 @@ export default function Gallery() {
                     <StyledCard key={`${logement}-${index}`} onClick={() => {
                         navigate(`/logement/${logement.id}`);
                         }}>
-                        <StyledCover src= {logement.cover} alt="logement" />
+                        <StyledCover src= {logement.cover} alt="logement photo prncipale" />
                         <StyledTitre key={`${logement}-${index}`}>
                             {logement.title}
                         </StyledTitre>
