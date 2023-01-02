@@ -1,10 +1,46 @@
 import React from "react"
+import styled from 'styled-components'
+import { Link } from "react-router-dom"
+import colors from '../../Utils/variables'
+
+const StyledContainer = styled.div`
+    min-height: calc(100vh - 189px);
+    padding: 0 20px;
+`
+
+const StyledTitle = styled.h1`
+    color: ${colors.primary};
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 288px;
+    margin: 0;
+    padding: 0;
+    margin-top: 60px;
+`
+
+const StyledDescription = styled.p`
+    color: ${colors.primary};
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 180px;
+`
+const StyledLink = styled(Link)`
+    color: ${colors.primary};
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+`
+
 
 export default function Error() {
     return (
-        <div>
-            <h1>404</h1>
-        </div>
+        <StyledContainer>
+            <StyledTitle>404</StyledTitle>
+            <StyledDescription>Oups! La page que vous avez demandez n'existe pas.</StyledDescription>
+            <StyledLink to="/">Retourner sur la page d'accueil</StyledLink>
+        </StyledContainer>
     )
 }
 
