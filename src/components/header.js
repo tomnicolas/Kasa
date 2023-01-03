@@ -1,6 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import image from "./../Assets/LOGO.svg"
 import colors from '../Utils/variables'
 
@@ -27,17 +27,17 @@ const StyledLink = styled(Link)`
 		text-decoration: underline;
 	};
 	
-
 `
 
-export default function Header() {
 
+export default function Header() {
+	const location = useLocation();
     return (
         <StyledHeader>
             <img src={image} alt="logo kasa" />
-            <nav className='nav'>
-                <StyledLink to="/">Accueil</StyledLink>
-                <StyledLink to="/about">A Propos</StyledLink>
+            <nav>
+                <StyledLink style={ location.pathname === '/' ? {textDecoration: 'underline'}: {textDecoration: 'none'}} to="/">Accueil</StyledLink>
+                <StyledLink style={ location.pathname === '/about' ? {textDecoration: 'underline'}: {textDecoration: 'none'}} to="/about">A Propos</StyledLink>
             </nav>
         </StyledHeader>
     )
