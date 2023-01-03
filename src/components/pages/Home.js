@@ -11,7 +11,7 @@ const StyledContainer = styled.div`
 export default function Home() {
     return (
     <StyledContainer>
-        <Banner/>
+        <Banner origin="Home"/>
         <Gallery/>
     </StyledContainer>
     )

@@ -1,5 +1,6 @@
 import React from "react"
-import image from "./../Assets/IMG.svg"
+import imageHome from "./../Assets/IMG.svg"
+import imageAbout from './../Assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.svg'
 import styled from 'styled-components'
 
 const StyledBanner = styled.div`
@@ -35,11 +36,20 @@ const StyledTitle = styled.h1`
 	font-size: 48px;
 `
 
-export default function Banner() {
+export default function Banner(props) {
+    if (props.origin === "Home") {
     return (
         <StyledBanner>
-            <StyledImg src={image} alt="bord de mer"/>
+            <StyledImg src={imageHome} alt="Bord de mer"/>
             <StyledTitle>Chez vous, partout et ailleurs</StyledTitle>
         </StyledBanner>
-    )
+        )
+    } else if (props.origin === "About") {
+        return (
+            <StyledBanner>
+            <StyledImg src={imageAbout} alt="Montagnes"/>
+        </StyledBanner>
+        )
+    }
+
 }

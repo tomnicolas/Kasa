@@ -19,7 +19,7 @@ const StyledGallery = styled.div`
 const StyledList = styled.div `
     display: grid;
     height: auto;
-    grid-template-columns: repeat(3, 31.13%) ;
+    grid-template-columns: repeat(3, 30.8%) ;
     column-gap: 4%;
     row-gap: 40px; 
     grid-template-rows: auto;
