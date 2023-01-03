@@ -22,11 +22,7 @@ const StyledLink = styled(Link)`
 	font-size: 24px;
 	padding-left: 50px;
 	text-decoration: none;
-	color: ${colors.primary};
-	&:focus{
-		text-decoration: underline;
-	};
-	
+	color: ${colors.primary};	
 `
 
 

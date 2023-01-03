@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import styled from 'styled-components'
+import styled, { keyframes} from 'styled-components'
 import colors from './../Utils/variables'
 import vector from './../Assets/Vector.svg'
 
@@ -8,7 +8,6 @@ const StyledDropdown = styled.div`
     display: flex;
     flex-direction: column;
     margin: auto;
-
 `
 
 const StyledDropHeader = styled.div`
@@ -17,6 +16,7 @@ const StyledDropHeader = styled.div`
     align-items: center;
     justify-content: space-between;
     height: 47px;
+    z-index: 1;
     border-radius: 5px;
     margin-top: 30px;
     background-color: ${colors.primary};
@@ -31,6 +31,15 @@ const StyledTitle = styled.h2`
     color: white;
 `
 
+const translateY = keyframes`
+    from {
+        transform: translateY(-50px);
+    } 
+    to {
+        transform: translateY(0px);
+    }
+`
+
 const StyledDescription = styled.p`
     font-family: 'Montserrat', sans-serif;
     background-color: ${colors.tertiary};
@@ -40,7 +49,9 @@ const StyledDescription = styled.p`
     padding: 30px 20px;
     border-radius: 0 0 5px 5px;
     font-size: 24px;
+    z-index: 0;
     color: ${colors.primary};
+    animation: ${translateY} 0.5s ease-out alternate;
 `
 
 export default function Dropdown(props) {

@@ -2,7 +2,7 @@ import React from "react"
 import Banner from '../banner'
 import styled from 'styled-components'
 import Dropdown from "../dropdown"
-import about from './../../datas/about.json'
+import about from '../../datas/about.json'
 
 const StyledContainer = styled.div`
     min-height: calc(100vh - 398px);

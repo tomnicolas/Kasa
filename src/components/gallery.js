@@ -78,7 +78,7 @@ export default function Gallery() {
                     <StyledCard key={`${logement}-${index}`} onClick={() => {
                         navigate(`/logement/${logement.id}`);
                         }}>
-                        <StyledCover src= {logement.cover} alt="logement photo prncipale" />
+                        <StyledCover src= {logement.cover} alt="logement photo principale" />
                         <StyledTitre key={`${logement}-${index}`}>
                             {logement.title}
                         </StyledTitre>

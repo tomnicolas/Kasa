@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom"
 import { createGlobalStyle } from 'styled-components'
 import Home from "./components/pages/Home"
-import Logement from "./components/pages/logement"
-import About from "./components/pages/about"
+import Logement from "./components/pages/Logement"
+import About from "./components/pages/About"
 import Error from "./components/pages/404"
 import Header from "./components/header"
 import Footer from "./components/footer"
