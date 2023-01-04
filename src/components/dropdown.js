@@ -5,10 +5,11 @@ import colors from './../Utils/variables'
 import vector from './../Assets/Vector.svg'
 
 const StyledDropdown = styled.div`
+    width: 100%;
     max-width: 1023px;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 30px auto 0 auto;
 `
 
 const StyledDropHeader = styled.div`
@@ -19,7 +20,6 @@ const StyledDropHeader = styled.div`
     height: 47px;
     z-index: 1;
     border-radius: 5px;
-    margin-top: 30px;
     background-color: ${colors.primary};
     padding: 0 20px;
     cursor: pointer;
@@ -64,18 +64,18 @@ export default function Dropdown(props) {
     return isOpen ?(
         <StyledDropdown>
             <StyledDropHeader onClick={() => setIsOpen(false)}>
-                <StyledTitle style={ location.pathname === '/about' ? {fontSize: '24px'}: {fontSize: '18px'}}>{props.title}</StyledTitle>
+                <StyledTitle style={location.pathname === '/about' ? {fontSize: '24px'}: {fontSize: '18px'}}>{props.title}</StyledTitle>
                 <img src={vector} alt="collapse" />
             </StyledDropHeader>
         </StyledDropdown>
     ) : (
         <StyledDropdown>
             <StyledDropHeader onClick={() => setIsOpen(true)}>
-                <StyledTitle style={ location.pathname === '/about' ? {fontSize: '24px'}: {fontSize: '18px'}}>{props.title}</StyledTitle>
+                <StyledTitle style={location.pathname === '/about' ? {fontSize: '24px'}: {fontSize: '18px'}}>{props.title}</StyledTitle>
                 <img src={vector} style={{transform: "rotate(180deg)"}} alt="collapse" />
             </StyledDropHeader>
             <StyledDescriptionBox>
-                <StyledDescription style={ location.pathname === '/about' ? {fontSize: '24px'}: {fontSize: '18px'}}>{props.description}</StyledDescription>
+                <StyledDescription style={location.pathname === '/about' ? {fontSize: '24px'}: {fontSize: '18px'}}>{props.description}</StyledDescription>
             </StyledDescriptionBox>
         </StyledDropdown>
 

@@ -9,15 +9,19 @@ const StyledContainer = styled.div`
     padding: 0 20px;
 `
 
+const StyledSection = styled.section`
+    margin: 30px 0 200px 0;
+`
+
 export default function About() {
     return (
     <StyledContainer>
         <Banner origin="About"/>
-        <section style={{marginBottom: '200px'}}>
+        <StyledSection >
             {about.map((about, index) => (
                 <Dropdown title={about.title} description={about.description} key={`${about}-${index}`}/>
             ))}
-        </section>
+        </StyledSection>
     </StyledContainer>
     )
 }

@@ -91,6 +91,15 @@ const StyledHostPicture = styled.img`
     border-radius: 32px;
 `
 
+const StyledLogementDesc = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5%;
+    align-items: start;
+    justify-content: space-between;
+    margin: 0;
+`
 
 export default function Logement() {
     const params = useParams()    
@@ -115,10 +124,10 @@ export default function Logement() {
                             <StyledHostPicture src={logement.host.picture} alt="hôte" />
                         </StyledHostInfos>
                     </StyledLogementHeader>
-                    <div>
+                    <StyledLogementDesc>
                         <Dropdown title={'Description'} description={logement.description} key={`${logement.id}-${logement.description}`}/>
                         <Dropdown title={'Équipements'} description={logement.equipments.slice().map(e=><>{e}<br/></>)}/>
-                    </div>
+                    </StyledLogementDesc>
                 </StyledList>
             ))}
         </StyledContainer>
