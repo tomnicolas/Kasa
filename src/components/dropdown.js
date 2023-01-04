@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import styled, { keyframes} from 'styled-components'
+import {  useLocation } from "react-router-dom"
 import colors from './../Utils/variables'
 import vector from './../Assets/Vector.svg'
 
@@ -27,7 +28,7 @@ const StyledDropHeader = styled.div`
 const StyledTitle = styled.h2`
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: ${props => (props.small ? '18px' : '24px')};
     color: white;
 `
 
@@ -40,13 +41,9 @@ const translateY = keyframes`
     }
 `
 
-const StyledDescription = styled.p`
-    font-family: 'Montserrat', sans-serif;
+const StyledDescriptionBox = styled.div`
     background-color: ${colors.tertiary};
-    font-weight: 400;
-    margin: 0;
     text-align: start;
-    padding: 30px 20px;
     border-radius: 0 0 5px 5px;
     font-size: 24px;
     z-index: 0;
@@ -54,23 +51,32 @@ const StyledDescription = styled.p`
     animation: ${translateY} 0.5s ease-out alternate;
 `
 
+const StyledDescription = styled.p`
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 40px 15px;
+`
+
 export default function Dropdown(props) {
     const [isOpen, setIsOpen] = useState(true)
+    const location = useLocation();
 
     return isOpen ?(
         <StyledDropdown>
             <StyledDropHeader onClick={() => setIsOpen(false)}>
-                <StyledTitle>{props.title}</StyledTitle>
+                <StyledTitle style={ location.pathname === '/about' ? {fontSize: '24px'}: {fontSize: '18px'}}>{props.title}</StyledTitle>
                 <img src={vector} alt="collapse" />
             </StyledDropHeader>
         </StyledDropdown>
     ) : (
         <StyledDropdown>
             <StyledDropHeader onClick={() => setIsOpen(true)}>
-                <StyledTitle>{props.title}</StyledTitle>
+                <StyledTitle style={ location.pathname === '/about' ? {fontSize: '24px'}: {fontSize: '18px'}}>{props.title}</StyledTitle>
                 <img src={vector} style={{transform: "rotate(180deg)"}} alt="collapse" />
             </StyledDropHeader>
-            <StyledDescription>{props.description}</StyledDescription>
+            <StyledDescriptionBox>
+                <StyledDescription style={ location.pathname === '/about' ? {fontSize: '24px'}: {fontSize: '18px'}}>{props.description}</StyledDescription>
+            </StyledDescriptionBox>
         </StyledDropdown>
 
     )

@@ -27,7 +27,7 @@ const StyledLink = styled(Link)`
 
 
 export default function Header() {
-	const location = useLocation();
+	const location = useLocation()
     return (
         <StyledHeader>
             <img src={image} alt="logo kasa" />

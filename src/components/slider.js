@@ -5,6 +5,7 @@ import vector from './../Assets/Vector.svg'
 const StyledSlider = styled.div`
     position: relative;
     height: 400px;
+    width:100%;
     max-width: 1240px;
     margin: auto;
     :after{
@@ -25,7 +26,6 @@ const StyledImg = styled.img`
     object-fit: cover;
     z-index: 0;
     border-radius: 25px;
-
 `
 
 const StyledLeftArrow = styled.img`
@@ -33,7 +33,7 @@ const StyledLeftArrow = styled.img`
     align-items: center;
     transform: rotate(90deg);
     z-index: 1;
-    top: 50%;
+    top: 47%;
     left: 30px;
     scale: 3;
     cursor: pointer;
@@ -43,7 +43,7 @@ const StyledRightArrow = styled.img`
     position: absolute;
     transform: rotate(-90deg);
     z-index: 1;
-    top: 50%;
+    top: 47%;
     right: 30px;
     scale: 3;
     cursor: pointer;
@@ -75,7 +75,7 @@ export default function Slider(props) {
     const newIndex = isLastSlide ? 0 : currentIndex + 1
     setCurrentIndex(newIndex)
     }
-    console.log(props);
+
     return (
         <StyledSlider>
             <StyledImg src={props.pictures[currentIndex]} alt="logement" />

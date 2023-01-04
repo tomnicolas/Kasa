@@ -4,8 +4,6 @@ import colors from './../Utils/variables'
 import logement from './../datas/datas.json'
 import { useNavigate } from "react-router-dom";
 
-const logements = logement
-
 const StyledGallery = styled.div`
     background-color: ${colors.tertiary}; 
     margin: auto;
@@ -74,7 +72,7 @@ export default function Gallery() {
     return (
         <StyledGallery>
             <StyledList>
-                {logements.map((logement, index) => (
+                {logement.map((logement, index) => (
                     <StyledCard key={`${logement}-${index}`} onClick={() => {
                         navigate(`/logement/${logement.id}`);
                         }}>
