@@ -1,9 +1,10 @@
 import {useParams} from "react-router-dom";
 import datas from './../../datas/datas.json'
-import styled from "styled-components"
 import Slider from "../slider"
+import styled from "styled-components"
 import colors from './../../Utils/variables'
 import Dropdown from './../dropdown'
+import Rating from "../rating";
 
 const StyledContainer = styled.div`
     min-height: calc(100vh - 398px);
@@ -66,6 +67,14 @@ const StyledTags = styled.div`
     width: fit-content;
     padding: 0 25px;
     margin-right: 10px;
+`
+
+const StyledInfos = styled.div`
+    display: flex;
+    height: 100;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
 
 `
 
@@ -119,10 +128,13 @@ export default function Logement() {
                                 ))}
                             </StyledTagsBar>
                         </div>
-                        <StyledHostInfos>
-                            <StyledHostName>{logement.host.name}</StyledHostName>
-                            <StyledHostPicture src={logement.host.picture} alt="hôte" />
-                        </StyledHostInfos>
+                        <StyledInfos>
+                            <StyledHostInfos>
+                                <StyledHostName>{logement.host.name}</StyledHostName>
+                                <StyledHostPicture src={logement.host.picture} alt="hôte" />
+                            </StyledHostInfos>
+                            <Rating rating={logement.rating}/>
+                        </StyledInfos>
                     </StyledLogementHeader>
                     <StyledLogementDesc>
                         <Dropdown title={'Description'} description={logement.description} key={`${logement.id}-${logement.description}`}/>
