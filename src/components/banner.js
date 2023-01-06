@@ -14,7 +14,7 @@ const StyledBanner = styled.div`
     overflow: hidden;
     max-width: 1240px;
     @media (max-width: 768px) {
-        height: 111px;
+        ${(props) => props.$height && `height: 111px`};
         border-radius: 10px;
     }
 `
@@ -55,7 +55,7 @@ export default function Banner(props) {
     console.log(windowWidth);
     if (props.origin === "Home") {
         return (
-        <StyledBanner>
+        <StyledBanner $height>
             <StyledImg src={imageHome} alt="Bord de mer"/>
             <StyledTitle>Chez vous, partout et ailleurs</StyledTitle>
         </StyledBanner>

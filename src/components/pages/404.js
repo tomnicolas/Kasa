@@ -6,6 +6,10 @@ import colors from '../../Utils/variables'
 const StyledContainer = styled.div`
     min-height: calc(100vh - 189px);
     padding: 0 20px;
+    @media (max-width: 768px) {
+		min-height: calc(100vh - 389px);
+	}
+    
 `
 
 const StyledTitle = styled.h1`
@@ -18,6 +22,8 @@ const StyledTitle = styled.h1`
     margin-top: 60px;
     @media (max-width: 768px) {
 		font-size: 96px;
+        margin-top: 180px;
+
 	}
 `
 
@@ -28,12 +34,21 @@ const StyledDescription = styled.p`
     font-size: 36px;
     margin-top: 40px;
     margin-bottom: 180px;
+    @media (max-width: 768px) {
+		font-size: 18px;
+        margin-top: 10px;
+        margin-right: 50px;
+        margin-left: 50px;
+	}
 `
 const StyledLink = styled(Link)`
     color: ${colors.primary};
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 18px;
+    @media (max-width: 768px) {
+		font-size: 14px;
+	}
 `
 
 

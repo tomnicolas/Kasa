@@ -28,7 +28,7 @@ const StyledLink = styled(Link)`
 	color: ${colors.primary};	
 	@media (max-width: 768px) {
 		font-size: 18px;
-		margin-left: 10px;
+		margin-left: 20px;
 	}
 `
 
