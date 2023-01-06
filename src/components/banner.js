@@ -7,19 +7,27 @@ const StyledBanner = styled.div`
     position: relative;
     align-items: center;
     height: 223px;
+    width: 100%;
     margin: auto;
     margin-top: 10px;
+    border-radius: 25px;
     overflow: hidden;
     max-width: 1240px;
+    @media (max-width: 768px) {
+        height: 111px;
+        border-radius: 10px;
+    }
 `
 
 const StyledImg = styled.img`
     height: 223px;
     max-width: 100%;
-    max-height: 100%;
     display: block;
     border-radius: 25px;
     filter: brightness(50%);
+    @media (max-width: 768px) {
+        border-radius: 10px;
+    }
 `
 
 const StyledTitle = styled.h1`
@@ -34,19 +42,34 @@ const StyledTitle = styled.h1`
     font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	font-size: 48px;
+    @media (max-width: 768px) {
+        font-size: 24px;
+        left: 5%;
+        margin-left: 0px;
+        margin-top: -14px;
+    }
 `
 
 export default function Banner(props) {
+    const windowWidth = window.innerWidth
+    console.log(windowWidth);
     if (props.origin === "Home") {
-    return (
+        return (
         <StyledBanner>
             <StyledImg src={imageHome} alt="Bord de mer"/>
             <StyledTitle>Chez vous, partout et ailleurs</StyledTitle>
         </StyledBanner>
         )
+    } else if ((props.origin === "Home") && (windowWidth <= 768)) {
+        return (
+        <StyledBanner>
+            <StyledImg src={imageAbout} alt="Bord de mer"/>
+            <StyledTitle>Chez vous</StyledTitle>
+        </StyledBanner>
+        )
     } else if (props.origin === "About") {
         return (
-            <StyledBanner>
+        <StyledBanner>
             <StyledImg src={imageAbout} alt="Montagnes"/>
         </StyledBanner>
         )

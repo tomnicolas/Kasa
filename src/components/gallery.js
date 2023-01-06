@@ -15,6 +15,7 @@ const StyledGallery = styled.div`
     @media (max-width: 768px) {
         padding: 0%;
         background-color: white;
+        margin-top: 20px;
     }
 `
 
@@ -31,6 +32,7 @@ const StyledList = styled.div `
     @media (max-width: 768px) {
         grid-template-columns: repeat(1, 100%) ;
         column-gap: 0%; 
+        row-gap: 20px;
     }
 `
 
