@@ -10,6 +10,9 @@ const StyledDropdown = styled.div`
     display: flex;
     flex-direction: column;
     margin: 30px auto 0 auto;
+    @media (max-width: 768px) {
+        margin: 20px auto 0 auto;
+    }
 `
 
 const StyledDropHeader = styled.div`
@@ -21,15 +24,26 @@ const StyledDropHeader = styled.div`
     z-index: 1;
     border-radius: 5px;
     background-color: ${colors.primary};
-    padding: 0 20px;
+    padding: 0 2%;
     cursor: pointer;
+    @media (max-width: 768px) {
+        height: 30px;
+    }
 `
 
 const StyledTitle = styled.h2`
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: ${props => (props.small ? '18px' : '24px')};
     color: white;
+    @media (max-width: 768px) {
+        font-size: 13px !important;
+    }
+`
+
+const StyledImg = styled.img`
+    @media (max-width: 768px) {
+        scale: 0.7;
+    }
 `
 
 const translateY = keyframes`
@@ -55,6 +69,10 @@ const StyledDescription = styled.p`
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     margin: 40px 15px;
+    @media (max-width: 768px) {
+        font-size: 12px !important;
+        margin: 10px 15px;
+    }
 `
 
 export default function Dropdown(props) {
@@ -65,14 +83,14 @@ export default function Dropdown(props) {
         <StyledDropdown>
             <StyledDropHeader onClick={() => setIsOpen(false)}>
                 <StyledTitle style={location.pathname === '/about' ? {fontSize: '24px'}: {fontSize: '18px'}}>{props.title}</StyledTitle>
-                <img src={vector} alt="collapse" />
+                <StyledImg src={vector} alt="collapse" />
             </StyledDropHeader>
         </StyledDropdown>
     ) : (
         <StyledDropdown>
             <StyledDropHeader onClick={() => setIsOpen(true)}>
                 <StyledTitle style={location.pathname === '/about' ? {fontSize: '24px'}: {fontSize: '18px'}}>{props.title}</StyledTitle>
-                <img src={vector} style={{transform: "rotate(180deg)"}} alt="collapse" />
+                <StyledImg src={vector} style={{transform: "rotate(180deg)"}} alt="collapse" />
             </StyledDropHeader>
             <StyledDescriptionBox>
                 <StyledDescription style={location.pathname === '/about' ? {fontSize: '24px'}: {fontSize: '18px'}}>{props.description}</StyledDescription>
