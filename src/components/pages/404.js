@@ -16,6 +16,9 @@ const StyledTitle = styled.h1`
     margin: 0;
     padding: 0;
     margin-top: 60px;
+    @media (max-width: 768px) {
+		font-size: 96px;
+	}
 `
 
 const StyledDescription = styled.p`

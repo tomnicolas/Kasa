@@ -60,13 +60,6 @@ export default function Banner(props) {
             <StyledTitle>Chez vous, partout et ailleurs</StyledTitle>
         </StyledBanner>
         )
-    } else if ((props.origin === "Home") && (windowWidth <= 768)) {
-        return (
-        <StyledBanner>
-            <StyledImg src={imageAbout} alt="Bord de mer"/>
-            <StyledTitle>Chez vous</StyledTitle>
-        </StyledBanner>
-        )
     } else if (props.origin === "About") {
         return (
         <StyledBanner>
