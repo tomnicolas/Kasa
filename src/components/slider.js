@@ -17,6 +17,9 @@ const StyledSlider = styled.div`
         left:0;
         border-radius: 25px;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+        @media (max-width: 768px) {
+            border-radius: 10px;
+        }
     }
 `
 
@@ -26,6 +29,9 @@ const StyledImg = styled.img`
     object-fit: cover;
     z-index: 0;
     border-radius: 25px;
+    @media (max-width: 768px) {
+        border-radius: 10px;
+    }
 `
 
 const StyledLeftArrow = styled.img`
@@ -34,9 +40,12 @@ const StyledLeftArrow = styled.img`
     transform: rotate(90deg);
     z-index: 1;
     top: 47%;
-    left: 30px;
+    left: 3%;
     scale: 3;
     cursor: pointer;
+    @media (max-width: 768px) {
+        scale: 1.5;
+    }
 `
 
 const StyledRightArrow = styled.img`
@@ -44,9 +53,12 @@ const StyledRightArrow = styled.img`
     transform: rotate(-90deg);
     z-index: 1;
     top: 47%;
-    right: 30px;
+    right: 3%;
     scale: 3;
     cursor: pointer;
+    @media (max-width: 768px) {
+        scale: 1.5;
+    }
 `
 
 const StyledIndex = styled.div`
@@ -58,6 +70,9 @@ const StyledIndex = styled.div`
     color: white;
     bottom: 25px;
     left: 49%;
+    @media (max-width: 768px) {
+        display: none;
+    }
 `
 
 export default function Slider(props) {
