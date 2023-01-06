@@ -5,6 +5,15 @@ import styled from 'styled-components'
 const StyledRatings = styled.div`
     display: flex;
     gap: 10px;
+    @media (max-width: 768px) {
+        gap: 5px;
+    }
+`
+
+const StyledStars = styled.img`
+@media (max-width: 768px) {
+    height: 15px;
+}
 `
 
 export default function Rating(props) {  
@@ -12,52 +21,52 @@ export default function Rating(props) {
         <div>{
             {
             '1':(<StyledRatings>
-                    <img src={star_red} alt="étoile grise" />
-                    <img src={star_grey} alt="étoile grise" />
-                    <img src={star_grey} alt="étoile grise" />
-                    <img src={star_grey} alt="étoile grise" />
-                    <img src={star_grey} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_grey} alt="étoile grise" />
+                    <StyledStars src={star_grey} alt="étoile grise" />
+                    <StyledStars src={star_grey} alt="étoile grise" />
+                    <StyledStars src={star_grey} alt="étoile grise" />
                 </StyledRatings>
                 ),
             '2':(<StyledRatings>
-                    <img src={star_red} alt="étoile grise" />
-                    <img src={star_red} alt="étoile grise" />
-                    <img src={star_grey} alt="étoile grise" />
-                    <img src={star_grey} alt="étoile grise" />
-                    <img src={star_grey} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_grey} alt="étoile grise" />
+                    <StyledStars src={star_grey} alt="étoile grise" />
+                    <StyledStars src={star_grey} alt="étoile grise" />
                 </StyledRatings>
                 ),
             '3':(<StyledRatings>
-                    <img src={star_red} alt="étoile grise" />
-                    <img src={star_red} alt="étoile grise" />
-                    <img src={star_red} alt="étoile grise" />
-                    <img src={star_grey} alt="étoile grise" />
-                    <img src={star_grey} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_grey} alt="étoile grise" />
+                    <StyledStars src={star_grey} alt="étoile grise" />
                 </StyledRatings>
                 ),
             '4':(<StyledRatings>
-                    <img src={star_red} alt="étoile grise" />
-                    <img src={star_red} alt="étoile grise" />
-                    <img src={star_red} alt="étoile grise" />
-                    <img src={star_red} alt="étoile grise" />
-                    <img src={star_grey} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_grey} alt="étoile grise" />
                 </StyledRatings>
                 ),
             '5':(<StyledRatings>
-                    <img src={star_red} alt="étoile grise" />
-                    <img src={star_red} alt="étoile grise" />
-                    <img src={star_red} alt="étoile grise" />
-                    <img src={star_red} alt="étoile grise" />
-                    <img src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
+                    <StyledStars src={star_red} alt="étoile grise" />
                 </StyledRatings>
                 ),
             }[props.rating] || 
             (<StyledRatings>
-                <img src={star_grey} alt="étoile grise" />
-                <img src={star_grey} alt="étoile grise" />
-                <img src={star_grey} alt="étoile grise" />
-                <img src={star_grey} alt="étoile grise" />
-                <img src={star_grey} alt="étoile grise" />
+                <StyledStars src={star_grey} alt="étoile grise" />
+                <StyledStars src={star_grey} alt="étoile grise" />
+                <StyledStars src={star_grey} alt="étoile grise" />
+                <StyledStars src={star_grey} alt="étoile grise" />
+                <StyledStars src={star_grey} alt="étoile grise" />
             </StyledRatings>)
             }
         </div>

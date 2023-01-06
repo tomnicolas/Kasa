@@ -29,6 +29,7 @@ const StyledLogementHeader = styled.div`
     text-align: start;
     margin-top: 30px;
     width: 100%;
+    max-width: 100%;
     @media (max-width: 768px) {
         flex-direction: column;
         margin-top: 10px;
@@ -60,9 +61,9 @@ const StyledLocation = styled.p`
 
 const StyledTagsBar = styled.div`
     display: flex;
-    margin-top: 20px;
+    max-width: 100%;
+    flex-wrap: wrap;
     @media (max-width: 768px) {
-        margin-top: 10px;
     }
 
 `
@@ -79,12 +80,14 @@ const StyledTags = styled.div`
     text-align: center;
     width: fit-content;
     padding: 0 25px;
+    margin-top: 20px;
     margin-right: 10px;
     @media (max-width: 768px) {
         font-size: 10px;
         height: 18px;
         line-height: 18px;
         border-radius: 5px;
+        margin-top: 10px;
     }
 `
 
@@ -97,6 +100,7 @@ const StyledInfos = styled.div`
     @media (max-width: 768px) {
         flex-direction: row-reverse;
         align-items: center;
+        padding: 0;
     }
 
 `
@@ -139,7 +143,11 @@ const StyledLogementDesc = styled.div`
     align-items: start;
     justify-content: space-between;
     margin: 0;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `
+
 
 export default function Logement() {
     const params = useParams()    
