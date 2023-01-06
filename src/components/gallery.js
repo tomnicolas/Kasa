@@ -12,6 +12,10 @@ const StyledGallery = styled.div`
     padding: 4%;
     margin-top: 40px;
     max-width: 1240px;
+    @media (max-width: 768px) {
+        padding: 0%;
+        background-color: white;
+    }
 `
 
 const StyledList = styled.div `
@@ -21,6 +25,13 @@ const StyledList = styled.div `
     column-gap: 4%;
     row-gap: 40px; 
     grid-template-rows: auto;
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(2, 48%) ;
+      }
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 100%) ;
+        column-gap: 0%; 
+    }
 `
 
 const StyledCard = styled.article`
@@ -42,6 +53,9 @@ const StyledCard = styled.article`
         cursor: pointer;
         box-shadow: 0px 0px 20px black;
     }
+    @media (max-width: 768px) {
+        aspect-ratio: 1.3 / 1;         
+    }
 `
 
 const StyledCover = styled.img`
@@ -54,10 +68,11 @@ const StyledCover = styled.img`
 const StyledTitre = styled.h3`
     position: absolute;
     z-index: 1;
+    max-width: 50%;
     margin-right: 10px;
     color: white;
     text-align : start;
-    left: 8%;
+    left: 5%;
     bottom: -0px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
