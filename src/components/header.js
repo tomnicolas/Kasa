@@ -13,6 +13,9 @@ const StyledHeader = styled.header`
 	align-items: center;
 	height: 68px;
 	justify-content: space-between;
+	@media (max-width: 768px) {
+		padding: 10px 20px 0 20px;
+	}
 `
 
 const StyledLink = styled(Link)`
@@ -20,17 +23,26 @@ const StyledLink = styled(Link)`
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	font-size: 24px;
-	padding-left: 50px;
+	margin-left: 50px;
 	text-decoration: none;
 	color: ${colors.primary};	
+	@media (max-width: 768px) {
+		font-size: 18px;
+		margin-left: 10px;
+	}
 `
 
+const StyledImg = styled.img`
+	@media (max-width: 768px) {
+		width: 145px;
+	}
+`
 
 export default function Header() {
 	const location = useLocation()
     return (
         <StyledHeader>
-            <img src={image} alt="logo kasa" />
+            <StyledImg src={image} alt="logo kasa" />
             <nav>
                 <StyledLink style={ location.pathname === '/' ? {textDecoration: 'underline'}: {textDecoration: 'none'}} to="/">Accueil</StyledLink>
                 <StyledLink style={ location.pathname === '/about' ? {textDecoration: 'underline'}: {textDecoration: 'none'}} to="/about">A Propos</StyledLink>
