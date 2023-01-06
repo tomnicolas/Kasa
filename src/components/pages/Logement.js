@@ -29,6 +29,10 @@ const StyledLogementHeader = styled.div`
     text-align: start;
     margin-top: 30px;
     width: 100%;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        margin-top: 10px;
+    }
 `
 
 const StyledTitle = styled.h1`
@@ -37,6 +41,9 @@ const StyledTitle = styled.h1`
     font-weight: 500;
     font-size: 36px;
     margin: 0;
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
 `
 
 const StyledLocation = styled.p`
@@ -46,11 +53,17 @@ const StyledLocation = styled.p`
     font-size: 18px;
     margin: 5px 0 0 0;
     padding: 0;
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 ` 
 
 const StyledTagsBar = styled.div`
     display: flex;
     margin-top: 20px;
+    @media (max-width: 768px) {
+        margin-top: 10px;
+    }
 
 `
 
@@ -67,6 +80,12 @@ const StyledTags = styled.div`
     width: fit-content;
     padding: 0 25px;
     margin-right: 10px;
+    @media (max-width: 768px) {
+        font-size: 10px;
+        height: 18px;
+        line-height: 18px;
+        border-radius: 5px;
+    }
 `
 
 const StyledInfos = styled.div`
@@ -75,6 +94,10 @@ const StyledInfos = styled.div`
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
+    @media (max-width: 768px) {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
 
 `
 
@@ -92,12 +115,20 @@ const StyledHostName = styled.p`
     text-align: right;
     width : min-content;
     margin-right: 10px;
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
 `
 
 const StyledHostPicture = styled.img`
     height: 64px;
     width: 64px;
     border-radius: 32px;
+    @media (max-width: 768px) {
+        height: 32px;
+        width: 32px;
+        border-radius: 16px;
+    }
 `
 
 const StyledLogementDesc = styled.div`

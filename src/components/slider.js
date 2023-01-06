@@ -21,6 +21,10 @@ const StyledSlider = styled.div`
             border-radius: 10px;
         }
     }
+    @media (max-width: 768px) {
+        border-radius: 10px;
+        height: 255px;
+    }
 `
 
 const StyledImg = styled.img`
@@ -44,7 +48,7 @@ const StyledLeftArrow = styled.img`
     scale: 3;
     cursor: pointer;
     @media (max-width: 768px) {
-        scale: 1.5;
+        scale: 1;
     }
 `
 
@@ -57,7 +61,7 @@ const StyledRightArrow = styled.img`
     scale: 3;
     cursor: pointer;
     @media (max-width: 768px) {
-        scale: 1.5;
+        scale: 1;
     }
 `
 
