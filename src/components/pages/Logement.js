@@ -9,6 +9,9 @@ import Rating from "../rating";
 const StyledContainer = styled.div`
     min-height: calc(100vh - 398px);
     padding: 0 20px;
+    @media (max-width: 768px) {
+        min-height: calc(100vh - 328px);
+    }
 `
 
 const StyledList = styled.div`
@@ -26,12 +29,15 @@ const StyledLogementHeader = styled.div`
     display: flex;
     flex-direction; row;
     justify-content: space-between;
+    align-items: center;
     text-align: start;
     margin-top: 30px;
     width: 100%;
     max-width: 100%;
     @media (max-width: 768px) {
         flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
         margin-top: 10px;
     }
 `
@@ -93,7 +99,6 @@ const StyledTags = styled.div`
 
 const StyledInfos = styled.div`
     display: flex;
-    height: 100;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
@@ -101,7 +106,10 @@ const StyledInfos = styled.div`
         flex-direction: row-reverse;
         align-items: center;
         padding: 0;
+        margin-top: 15px;
+        width: 100%;
     }
+    
 
 `
 
@@ -109,6 +117,11 @@ const StyledHostInfos = styled.div`
     display: flex;
     align-items: center;
     height: 64px;
+    margin-bottom: 20px;
+    @media (max-width: 768px) {
+        height: 32px;
+        margin-bottom: 0px;
+    }
 `
 
 const StyledHostName = styled.p`
@@ -118,6 +131,7 @@ const StyledHostName = styled.p`
     font-size: 18px;
     text-align: right;
     width : min-content;
+    margin: 0;
     margin-right: 10px;
     @media (max-width: 768px) {
         font-size: 12px;
