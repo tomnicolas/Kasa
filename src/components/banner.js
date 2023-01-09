@@ -47,6 +47,9 @@ const StyledTitle = styled.h1`
     font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	font-size: 48px;
+    @media (max-width: 814px) {
+        margin-top: -63px;
+    }
     @media (max-width: 768px) {
         font-size: 24px;
         left: 5%;
