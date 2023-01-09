@@ -1,6 +1,6 @@
 import React from "react"
 import imageHome from "./../Assets/IMG.svg"
-import imageAbout from './../Assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.svg'
+import imageAbout from './../Assets/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
 import styled from 'styled-components'
 
 const StyledBanner = styled.div`
@@ -22,9 +22,11 @@ const StyledBanner = styled.div`
 const StyledImg = styled.img`
     height: 223px;
     max-width: 100%;
+    width: 100%;
     display: block;
     border-radius: 25px;
     filter: brightness(50%);
+    object-fit: cover;
     @media (max-width: 768px) {
         border-radius: 10px;
     }
