@@ -48,7 +48,7 @@ const StyledImg = styled.img`
 
 const translateY = keyframes`
     from {
-        transform: translateY(-50px);
+        transform: translateY(-10px);
     } 
     to {
         transform: translateY(0px);
