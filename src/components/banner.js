@@ -31,13 +31,16 @@ const StyledImg = styled.img`
 `
 
 const StyledTitle = styled.h1`
+    display: flex;
+    flex-wrap: wrap;
     position: absolute;
     top: 50%;
     margin-top: -29px;
     left: 50%;
     margin-left: -352px;
+    margin-right: 40px;
     padding: 0;
-    z-index: 10;
+    z-index: 1;
     color: white;
     font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
@@ -48,7 +51,11 @@ const StyledTitle = styled.h1`
         margin-left: 0px;
         margin-top: -14px;
     }
+    @media (max-width: 454px) {
+        margin-top: -30px;
+    }
 `
+
 
 export default function Banner(props) {
     const windowWidth = window.innerWidth
@@ -57,7 +64,7 @@ export default function Banner(props) {
         return (
         <StyledBanner $height>
             <StyledImg src={imageHome} alt="Bord de mer"/>
-            <StyledTitle>Chez vous, partout et ailleurs</StyledTitle>
+            <StyledTitle><div style={{marginRight: '8px'}}>Chez vous,</div><div> partout et ailleurs</div></StyledTitle>
         </StyledBanner>
         )
     } else if (props.origin === "About") {
