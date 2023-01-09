@@ -7,6 +7,9 @@ import about from '../../datas/about.json'
 const StyledContainer = styled.div`
     min-height: calc(100vh - 398px);
     padding: 0 20px;
+    @media (max-width: 768px) {
+        min-height: calc(100vh - 338px);
+    }
 `
 
 const StyledSection = styled.section`
