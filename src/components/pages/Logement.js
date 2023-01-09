@@ -26,15 +26,13 @@ const StyledList = styled.div`
 `
 
 const StyledLogementHeader = styled.div`
-    display: flex;
-    flex-direction; row;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
     text-align: start;
     margin-top: 30px;
     width: 100%;
-    max-width: 100%;
     @media (max-width: 768px) {
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: start;
@@ -48,6 +46,7 @@ const StyledTitle = styled.h1`
     font-weight: 500;
     font-size: 36px;
     margin: 0;
+    margin-right: 50px;
     @media (max-width: 768px) {
         font-size: 18px;
     }
@@ -101,6 +100,8 @@ const StyledInfos = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    height: 100%;
+    margin: 0;
     justify-content: space-between;
     @media (max-width: 768px) {
         flex-direction: row-reverse;
@@ -117,7 +118,6 @@ const StyledHostInfos = styled.div`
     display: flex;
     align-items: center;
     height: 64px;
-    margin-bottom: 20px;
     @media (max-width: 768px) {
         height: 32px;
         margin-bottom: 0px;
