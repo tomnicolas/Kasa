@@ -63,8 +63,6 @@ const StyledTitle = styled.h1`
 
 
 export default function Banner(props) {
-    const windowWidth = window.innerWidth
-    console.log(windowWidth);
     if (props.origin === "Home") {
         return (
         <StyledBanner $height>
