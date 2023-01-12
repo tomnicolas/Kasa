@@ -1,7 +1,9 @@
+// Import packages and components 
 import star_grey from './../Assets/Star_grey.svg'
 import star_red from './../Assets/Star_red.svg'
 import styled from 'styled-components'
 
+// Stylize the elements of the page
 const StyledRatings = styled.div`
     display: flex;
     gap: 10px;
@@ -9,13 +11,13 @@ const StyledRatings = styled.div`
         gap: 5px;
     }
 `
-
 const StyledStars = styled.img`
 @media (max-width: 768px) {
     height: 15px;
-}
+    }
 `
 
+// Export the main function of the component
 export default function Rating(props) {  
     return (
         <div>{
