@@ -1,9 +1,11 @@
+// Import packages and components 
 import React, {useState} from "react"
 import styled, { keyframes} from 'styled-components'
 import {  useLocation } from "react-router-dom"
 import colors from './../Utils/variables'
 import vector from './../Assets/Vector.svg'
 
+// Stylize the elements of the page
 const StyledDropdown = styled.div`
     width: 100%;
     max-width: 1023px;
@@ -14,7 +16,6 @@ const StyledDropdown = styled.div`
         margin: 20px auto 0 auto;
     }
 `
-
 const StyledDropHeader = styled.div`
     display: flex;
     flex-direction: row;
@@ -30,7 +31,6 @@ const StyledDropHeader = styled.div`
         height: 30px;
     }
 `
-
 const StyledTitle = styled.h2`
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -39,13 +39,11 @@ const StyledTitle = styled.h2`
         font-size: 13px !important;
     }
 `
-
 const StyledImg = styled.img`
     @media (max-width: 768px) {
         scale: 0.7;
     }
 `
-
 const translateY = keyframes`
     from {
         transform: translateY(-10px);
@@ -54,7 +52,6 @@ const translateY = keyframes`
         transform: translateY(0px);
     }
 `
-
 const StyledDescriptionBox = styled.div`
     background-color: ${colors.tertiary};
     text-align: start;
@@ -64,7 +61,6 @@ const StyledDescriptionBox = styled.div`
     color: ${colors.primary};
     animation: ${translateY} 0.5s ease-out alternate;
 `
-
 const StyledDescription = styled.p`
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -75,6 +71,7 @@ const StyledDescription = styled.p`
     }
 `
 
+// Export the main function of the component
 export default function Dropdown(props) {
     const [isOpen, setIsOpen] = useState(true)
     const location = useLocation();
@@ -96,7 +93,5 @@ export default function Dropdown(props) {
                 <StyledDescription style={location.pathname === '/about' ? {fontSize: '24px'}: {fontSize: '18px'}}>{props.description}</StyledDescription>
             </StyledDescriptionBox>
         </StyledDropdown>
-
     )
-
 }
