@@ -1,9 +1,11 @@
+// Import packages and components 
 import React from "react"
 import styled from 'styled-components'
 import colors from './../Utils/variables'
 import logement from './../datas/datas.json'
 import { useNavigate } from "react-router-dom";
 
+// Stylize the elements of the page
 const StyledGallery = styled.div`
     background-color: ${colors.tertiary}; 
     margin: auto;
@@ -18,7 +20,6 @@ const StyledGallery = styled.div`
         margin-top: 20px;
     }
 `
-
 const StyledList = styled.div `
     display: grid;
     height: auto;
@@ -35,7 +36,6 @@ const StyledList = styled.div `
         row-gap: 20px;
     }
 `
-
 const StyledCard = styled.article`
     position: relative;
     overflow: hidden;
@@ -59,14 +59,12 @@ const StyledCard = styled.article`
         aspect-ratio: 1.3 / 1;         
     }
 `
-
 const StyledCover = styled.img`
     object-fit: cover;
     max-width: 100%;
     height: 100%;
     display: block;
 `
-
 const StyledTitre = styled.h3`
     position: absolute;
     z-index: 1;
@@ -82,10 +80,9 @@ const StyledTitre = styled.h3`
 
 `
 
+// Export the main function of the component
 export default function Gallery() {   
-    
     const navigate = useNavigate()
-    
     return (
         <StyledGallery>
             <StyledList>
