@@ -1,3 +1,4 @@
+// Import packages and components 
 import { Routes, Route } from "react-router-dom"
 import { createGlobalStyle } from 'styled-components'
 import Home from "./components/pages/Home"
@@ -7,6 +8,7 @@ import Error from "./components/pages/404"
 import Header from "./components/header"
 import Footer from "./components/footer"
 
+// Stylize the body
 const GlobalStyle = createGlobalStyle`
 	body {
 		text-align: center;
@@ -14,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 `
 
+// Export global routes of the app
 export default function App() {
   return (
     <div>
