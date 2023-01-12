@@ -2,7 +2,7 @@
 import React from "react"
 import styled from 'styled-components'
 import { Link } from "react-router-dom"
-import colors from '../../Utils/variables'
+import colors from '../Utils/variables'
 
 // Stylize the elements of the page
 const StyledContainer = styled.div`

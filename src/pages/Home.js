@@ -1,8 +1,8 @@
 // Import packages and components 
 import React from "react"
-import Banner from '../banner'
+import Banner from "../components/banner"
 import styled from 'styled-components'
-import Gallery from "../gallery"
+import Gallery from "../components/gallery"
 
 // Stylize the elements of the page
 const StyledContainer = styled.div`

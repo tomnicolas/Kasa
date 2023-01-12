@@ -1,10 +1,10 @@
 // Import packages and components 
 import { Routes, Route } from "react-router-dom"
 import { createGlobalStyle } from 'styled-components'
-import Home from "./components/pages/Home"
-import Logement from "./components/pages/Logement"
-import About from "./components/pages/About"
-import Error from "./components/pages/404"
+import Home from "./pages/Home"
+import Logement from "./pages/Logement"
+import About from "./pages/About"
+import Error from "./pages/404"
 import Header from "./components/header"
 import Footer from "./components/footer"
 

@@ -1,8 +1,10 @@
+// Import packages and components 
 import React from "react"
 import imageHome from "./../Assets/IMG.svg"
 import imageAbout from './../Assets/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
 import styled from 'styled-components'
 
+// Stylize the elements of the page
 const StyledBanner = styled.div`
     position: relative;
     align-items: center;
@@ -18,7 +20,6 @@ const StyledBanner = styled.div`
         border-radius: 10px;
     }
 `
-
 const StyledImg = styled.img`
     height: 223px;
     max-width: 100%;
@@ -31,7 +32,6 @@ const StyledImg = styled.img`
         border-radius: 10px;
     }
 `
-
 const StyledTitle = styled.h1`
     display: flex;
     flex-wrap: wrap;
@@ -61,7 +61,7 @@ const StyledTitle = styled.h1`
     }
 `
 
-
+// Export the main function of the component
 export default function Banner(props) {
     if (props.origin === "Home") {
         return (

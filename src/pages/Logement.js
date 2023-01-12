@@ -1,11 +1,11 @@
 // Import packages and components 
 import {useParams} from "react-router-dom";
-import datas from './../../datas/datas.json'
-import Slider from "../slider"
+import datas from './../datas/datas.json'
+import Slider from "./../components/slider"
 import styled from "styled-components"
-import colors from './../../Utils/variables'
-import Dropdown from './../dropdown'
-import Rating from "../rating";
+import colors from './../Utils/variables'
+import Dropdown from './../components/dropdown'
+import Rating from "./../components/rating";
 
 // Stylize the elements of the page
 const StyledContainer = styled.div`
