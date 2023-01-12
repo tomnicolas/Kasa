@@ -1,3 +1,4 @@
+// Import packages and components 
 import {useParams} from "react-router-dom";
 import datas from './../../datas/datas.json'
 import Slider from "../slider"
@@ -6,6 +7,7 @@ import colors from './../../Utils/variables'
 import Dropdown from './../dropdown'
 import Rating from "../rating";
 
+// Stylize the elements of the page
 const StyledContainer = styled.div`
     min-height: calc(100vh - 398px);
     padding: 0 20px;
@@ -13,7 +15,6 @@ const StyledContainer = styled.div`
         min-height: calc(100vh - 328px);
     }
 `
-
 const StyledList = styled.div`
     display: flex;
     flex-direction: column;
@@ -24,7 +25,6 @@ const StyledList = styled.div`
     width: 100%;
     max-width: 1240px;
 `
-
 const StyledLogementHeader = styled.div`
     display: grid;
     grid-template-columns: auto auto;
@@ -39,7 +39,6 @@ const StyledLogementHeader = styled.div`
         margin-top: 10px;
     }
 `
-
 const StyledTitle = styled.h1`
     color: ${colors.primary};
     font-family: 'Montserrat', sans-serif;
@@ -51,7 +50,6 @@ const StyledTitle = styled.h1`
         font-size: 18px;
     }
 `
-
 const StyledLocation = styled.p`
     color: ${colors.primary};
     font-family: 'Montserrat', sans-serif;
@@ -63,16 +61,13 @@ const StyledLocation = styled.p`
         font-size: 14px;
     }
 ` 
-
 const StyledTagsBar = styled.div`
     display: flex;
     max-width: 100%;
     flex-wrap: wrap;
     @media (max-width: 768px) {
     }
-
 `
-
 const StyledTags = styled.div`
     height: 25px;
     background-color: ${colors.primary};
@@ -95,7 +90,6 @@ const StyledTags = styled.div`
         margin-top: 10px;
     }
 `
-
 const StyledInfos = styled.div`
     display: flex;
     flex-direction: column;
@@ -109,11 +103,8 @@ const StyledInfos = styled.div`
         padding: 0;
         margin-top: 15px;
         width: 100%;
-    }
-    
-
+    }  
 `
-
 const StyledHostInfos = styled.div`
     display: flex;
     align-items: center;
@@ -123,7 +114,6 @@ const StyledHostInfos = styled.div`
         margin-bottom: 0px;
     }
 `
-
 const StyledHostName = styled.p`
     color: ${colors.primary};
     font-family: 'Montserrat', sans-serif;
@@ -137,7 +127,6 @@ const StyledHostName = styled.p`
         font-size: 12px;
     }
 `
-
 const StyledHostPicture = styled.img`
     height: 64px;
     width: 64px;
@@ -148,7 +137,6 @@ const StyledHostPicture = styled.img`
         border-radius: 16px;
     }
 `
-
 const StyledLogementDesc = styled.div`
     display: flex;
     flex-direction: row;
@@ -162,7 +150,7 @@ const StyledLogementDesc = styled.div`
     }
 `
 
-
+// Export the main function of the page
 export default function Logement() {
     const params = useParams()    
     
