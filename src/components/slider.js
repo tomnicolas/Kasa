@@ -1,7 +1,9 @@
+// Import packages and components 
 import styled from "styled-components";
 import { useState } from "react";
 import vector from './../Assets/Vector.svg'
 
+// Stylize the elements of the page
 const StyledSlider = styled.div`
     position: relative;
     height: 400px;
@@ -26,7 +28,6 @@ const StyledSlider = styled.div`
         height: 255px;
     }
 `
-
 const StyledImg = styled.img`
     width: 100%;
     height: 100%;
@@ -37,7 +38,6 @@ const StyledImg = styled.img`
         border-radius: 10px;
     }
 `
-
 const StyledLeftArrow = styled.img`
     position: absolute;
     align-items: center;
@@ -51,7 +51,6 @@ const StyledLeftArrow = styled.img`
         scale: 1;
     }
 `
-
 const StyledRightArrow = styled.img`
     position: absolute;
     transform: rotate(-90deg);
@@ -64,7 +63,6 @@ const StyledRightArrow = styled.img`
         scale: 1;
     }
 `
-
 const StyledIndex = styled.div`
     position: absolute;
     font-family: 'Montserrat', sans-serif;
@@ -79,8 +77,8 @@ const StyledIndex = styled.div`
     }
 `
 
+// Export the main function of the component
 export default function Slider(props) {
-
     const [currentIndex, setCurrentIndex] = useState(0)
     
     const goToPrevious = () => {
