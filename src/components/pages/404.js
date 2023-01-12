@@ -1,17 +1,17 @@
+// Import packages and components 
 import React from "react"
 import styled from 'styled-components'
 import { Link } from "react-router-dom"
 import colors from '../../Utils/variables'
 
+// Stylize the elements of the page
 const StyledContainer = styled.div`
     min-height: calc(100vh - 189px);
     padding: 0 20px;
     @media (max-width: 768px) {
 		min-height: calc(100vh - 389px);
 	}
-    
 `
-
 const StyledTitle = styled.h1`
     color: ${colors.primary};
     font-family: 'Montserrat', sans-serif;
@@ -23,10 +23,8 @@ const StyledTitle = styled.h1`
     @media (max-width: 768px) {
 		font-size: 96px;
         margin-top: 180px;
-
 	}
 `
-
 const StyledDescription = styled.p`
     color: ${colors.primary};
     font-family: 'Montserrat', sans-serif;
@@ -51,7 +49,7 @@ const StyledLink = styled(Link)`
 	}
 `
 
-
+// Export the main function of the page
 export default function Error() {
     return (
         <StyledContainer>
