@@ -1,8 +1,10 @@
+// Import packages and components 
 import React from "react"
 import image from "./../Assets/LOGO.svg"
 import styled from 'styled-components'
 import colors from '../Utils/variables'
 
+// Stylize the elements of the page
 const StyledFooter = styled.footer`
     width: 100%;
     height : 200px;
@@ -11,7 +13,6 @@ const StyledFooter = styled.footer`
     bottom: 0;
     background-color: ${colors.secondary};
 `
-
 const StyledLogo = styled.img`
     scale: 0.5;
     margin: 50px 0 0 0;
@@ -25,6 +26,7 @@ const StyledP = styled.p`
     color: white;
 `
 
+// Export the main function of the component
 export default function Footer() {
     return (
         <StyledFooter>
