@@ -1,5 +1,5 @@
 // Import packages and components 
-import React, {useState} from "react"
+import {useState} from "react"
 import styled, { keyframes} from 'styled-components'
 import {  useLocation } from "react-router-dom"
 import colors from './../Utils/variables'

@@ -1,5 +1,4 @@
 // Import packages and components 
-import React from "react"
 import image from "./../Assets/LOGO.svg"
 import styled from 'styled-components'
 import colors from '../Utils/variables'

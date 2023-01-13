@@ -1,5 +1,4 @@
 // Import packages and components 
-import React from "react"
 import imageHome from "./../Assets/IMG.svg"
 import imageAbout from './../Assets/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg'
 import styled from 'styled-components'

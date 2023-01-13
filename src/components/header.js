@@ -1,5 +1,4 @@
 // Import packages and components 
-import React from "react"
 import styled from 'styled-components'
 import { Link, useLocation } from "react-router-dom"
 import image from "./../Assets/LOGO.svg"
