@@ -23,6 +23,9 @@ const StyledP = styled.p`
     font-size: 22px;
     margin: 20px 0 30px 0;
     color: white;
+    @media (max-width: 768px) {
+		font-size: 12px;
+	}
 `
 
 // Export the main function of the component
