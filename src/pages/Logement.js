@@ -179,7 +179,7 @@ export default function Logement() {
                     </StyledLogementHeader>
                     <StyledLogementDesc>
                         <Dropdown title={'Description'} description={logement.description} key={`${logement.id}-${logement.description}`}/>
-                        <Dropdown title={'Équipements'} description={logement.equipments.slice().map(e=><>{e}<br/></>)}/>
+                        <Dropdown title={'Équipements'} key={`${logement.id}-${logement.equipments}`} description={logement.equipments.slice().map(e=><>{e}<br/></>)} />
                     </StyledLogementDesc>
                 </StyledList>
             ))}
